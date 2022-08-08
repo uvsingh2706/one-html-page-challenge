@@ -455,4 +455,11 @@ const entries = [
 		author: "Satyabrata Sahoo",
 		github: "satyasonu"
 	}
+	{
+		title: "digitalclock",
+		filesname: "digitalclock.html",
+		description: "A 12hr formate  digital clock ",
+		author: "yuvrajsingh chouhan",
+		github: "uvsingh2706"
+	}
 ];
