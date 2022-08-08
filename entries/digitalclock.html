@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: black;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+    margin-left: 413px;
+  }
+.center {
+    background-color: #2ecc71;
+    height: 200px;
+    border-radius: 50px
+  }
+.digiclock{
+
+   
+    align-items: center;
+    color: aqua;
+    margin: 45px;
+    font-size: 100px;
+    
+}
+</style>
+<body>
+    <div class="center">
+     <div class="digiclock" id="clock"></div>
+   </div>  
+    
+</body>
+<script >
+    let clock = () => {
+let date = new Date();
+let hrs = date.getHours();
+let min = date.getMinutes();
+let sec = date.getSeconds();
+
+let period = 'AM';
+if (hrs == 0) hrs = 12;
+if(hrs>12){
+hrs = hrs - 12
+period = 'PM';
+} 
+hrs = hrs < 10 ? "0" + hrs:hrs;
+min = min < 10 ? "0" + min:min;
+sec = sec < 10 ? "0" + sec:sec;
+
+let time = `${hrs}:${min}:${sec}:${period}`;
+document.getElementById("clock").innerText = time;
+setTimeout(clock, 1000);
+
+}
+clock();
+
+</script>
+</html>
